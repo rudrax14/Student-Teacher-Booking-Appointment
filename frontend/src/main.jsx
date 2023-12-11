@@ -5,9 +5,11 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { UserProvider } from "./context/Provider.jsx";
+import indexContext from "./context/indexState.js";
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <UserProvider>
+  <indexContext>
+
+
     <BrowserRouter>
       <App />
       <ToastContainer
@@ -23,5 +25,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         theme="light"
       />
     </BrowserRouter>
-  </UserProvider>
+  </indexContext>
+
 );
